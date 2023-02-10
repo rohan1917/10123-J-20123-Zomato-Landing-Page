@@ -44,6 +44,58 @@
 }
 
 
+.hero__section_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: calc(60vh - 65px);
+    
+}
+
+.hero__section_logo{
+    width: 200px;
+    height: 40px;
+    /* height: auto; */
+}
+
+.hero__section_title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 380;
+}
+
+.hero__section_input_container{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.input_container_location, 
+.input_container_search{
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+
+
+.input_container_location{
+    width: 35%;
+    border-right: 2px solid #e0e0e0;
+}
+
+.input_container_search{
+    width: 65%;
+}
+
+
 /* Screen Size is from 0-600 i.e., smaller/mobile screen */
 @media only screen and (max-width: 600px){
     .navbar__menu_container .user_icon{
@@ -55,4 +107,70 @@
     .hero__section{
         min-height: 80vh;
     }
+    .hero__section_container{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+    }
+    .input_container_location,
+    .input_container_search{
+        padding: 18px;
+        border-radius: 10px;
+        width: 98%;
+    }
+    .hero__section_container{
+        height: calc(80vh - 40px);
+    }
+    .hero__section_title{
+        font-size: 18px;
+        width: 95%;
+    }
+
+}
+
+/* Out of media queries */
+
+.container{
+    margin: 3rem auto;
+    width: 90%;
+}
+
+.we__offer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.we__offer_card{
+    border-radius: 10px;
+    /* background-color: aqua; */
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: all 1s ease;
+    margin-right: 12px;
+}
+
+.we__offer_card:hover{
+    transform: scale(1.1);
+}
+
+.we__offer_card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.we__offer_content{
+    padding: 10px;
+}
+.we__offer_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.we__offer_content p{
+    font-size: 12.5px;
 }
